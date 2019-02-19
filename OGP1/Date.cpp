@@ -3,6 +3,8 @@
 class Date 
 {
 public:
+	Date(int dag, int maand, int jaar);  //constructor//
+	Date() = default;  //default constructor//
 	void printDate() const;
 	void setDate();
 private:
@@ -10,6 +12,8 @@ private:
 	int m_maand;
 	int m_jaar;
 };
+
+Date::Date(int dag, int maand, int jaar) : m_dag{ dag }, m_maand{ maand }, m_jaar{ jaar } {}
 
 void Date::printDate() const 
 {
